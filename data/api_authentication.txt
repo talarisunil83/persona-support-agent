@@ -1,0 +1,7 @@
+API Authentication
+
+Use Bearer tokens for authentication.
+
+Authorization: Bearer YOUR_TOKEN
+
+Tokens expire after 24 hours.

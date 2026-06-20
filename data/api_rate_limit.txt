@@ -1,0 +1,7 @@
+API Rate Limits
+
+Free tier: 100 requests per minute.
+
+Premium tier: 1000 requests per minute.
+
+Exceeding limits returns HTTP 429.

@@ -1,0 +1,8 @@
+Account Lockout
+
+Accounts are locked after 5 failed login attempts.
+
+Users must:
+1. Wait 30 minutes
+or
+2. Contact support for manual unlock.

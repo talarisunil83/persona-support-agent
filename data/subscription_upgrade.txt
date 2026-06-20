@@ -1,0 +1,8 @@
+Subscription Upgrade
+
+Users can upgrade from Free to Premium.
+
+Benefits:
+- Higher API limits
+- Priority support
+- Advanced analytics

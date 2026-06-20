@@ -1,0 +1,9 @@
+Login Issues
+
+Users may be unable to login due to:
+- Incorrect password
+- Account lockout
+- Expired credentials
+
+Recommended action:
+Reset password and retry login.

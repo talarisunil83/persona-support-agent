@@ -1,0 +1,6 @@
+Security Best Practices
+
+- Enable MFA
+- Use strong passwords
+- Rotate API keys regularly
+- Avoid sharing credentials
