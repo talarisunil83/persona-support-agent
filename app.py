@@ -1,31 +1,33 @@
+import streamlit as st
+
 from src.rag_pipeline import load_documents, search_documents
 from src.classifier import classify_persona
 from src.llm import generate_answer
 
+st.title("Persona Support Agent")
+
 documents = load_documents("data")
 
-while True:
+query = st.text_input("Ask your question")
 
-    query = input("\nAsk a question (type exit to quit): ")
+if st.button("Submit"):
 
-    if query.lower() == "exit":
-        break
+    if query:
 
-    persona = classify_persona(query)
+        persona = classify_persona(query)
 
-    result = search_documents(query, documents)
+        result = search_documents(query, documents)
 
-    if result:
+        if result:
 
-        answer = generate_answer(
-            query,
-            result["content"],
-            persona
-        )
+            answer = generate_answer(
+                query,
+                result["content"],
+                persona
+            )
 
-        print("\nPersona:", persona)
-        print("\nAnswer:")
-        print(answer)
+            st.success(f"Detected Persona: {persona}")
+            st.write(answer)
 
-    else:
-        print("No relevant document found.")
+        else:
+            st.error("No relevant document found.")
